@@ -1,0 +1,22 @@
+databases:
+  - name: youtubeplayer
+    plan: free
+    databaseName: youtubeplayerdb
+    user: youtubeplayer
+
+services:
+  - type: web
+    plan: free
+    name: youtubeplayer
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn youtubeplayer.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: youtubeplayerdb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
