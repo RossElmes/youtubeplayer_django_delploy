@@ -22,23 +22,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY='akndvjsnvjnaovnqewjrnvoisanr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG','False') == 'True'
+#DEBUG = os.environ.get('DEBUG','False') == 'True'
+DEBUG='True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "myapp.apps.MyappConfig",
+    "users.apps.UsersConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+     "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -79,7 +85,8 @@ WSGI_APPLICATION = 'youtubeplayer.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgres://relmes:mzUQZzt7JQjmWcDCmHUQVU4NSrSFpUoS@dpg-co26uo6d3nmc73a39km0-a/youtubeplayerbd',
+        #default='postgres://relmes:mzUQZzt7JQjmWcDCmHUQVU4NSrSFpUoS@dpg-co26uo6d3nmc73a39km0-a/youtubeplayerbd',
+        default='postgres://postgres:postgres@localhost:5432/youtubeplayer',
         conn_max_age=600
     )
 }
@@ -133,3 +140,5 @@ if not DEBUG:
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
