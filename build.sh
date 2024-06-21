@@ -10,7 +10,7 @@ python manage.py collectstatic --no-input
 
 #Build Super User on Render
 if [[CREATESUPERUSER]]:
-    python manage.py createsuperuser
+    python manage.py createsuperuser  --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
