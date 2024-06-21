@@ -9,7 +9,8 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 
 #Build Super User on Render
-if [[CREATESUPERUSER]]:
+if [[CREATESUPERUSER]];
+then
     python manage.py createsuperuser  --no-input
 
 # Apply any outstanding database migrations
