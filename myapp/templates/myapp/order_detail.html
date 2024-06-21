@@ -1,0 +1,23 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<h1>Order Detail - Order {{ order.id }}</h1>
+<div>
+    <h2>Order Items</h2>
+    <ul>
+        {% for order_item in order_items %}
+        <li>
+            {{ order_item.product.name }} - Quantity: {{ order_item.quantity }}
+        </li>
+        {% empty %}
+        <li>No items in order</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <h2>Total Amount: ${{ order.total_amount }}</h2>
+</div>
+<small class="text-muted">
+  Back to Make an new Order? <a class="ml-2" href="{% url 'place_order' %}">New Order</a>
+</small>
+{% endblock %}
