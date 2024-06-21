@@ -1,0 +1,12 @@
+
+{% extends "myapp/base.html" %}
+
+{% block content %}
+  <h1>Add Product to Order</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add to Order</button>
+  </form>
+  <a href="{% url 'order_summary' order.id %}" class="btn btn-secondary">View Order Summary</a>
+{% endblock %}
