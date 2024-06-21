@@ -12,4 +12,4 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 #Build Super User on Render
-python manage.py createsuperuser
+#python manage.py createsuperuser
