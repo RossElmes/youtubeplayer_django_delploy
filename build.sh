@@ -12,4 +12,5 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 #Build Super User on Render
-#python manage.py createsuperuser
+if [[CREATESUPERUSER]]:
+    python manage.py createsuperuser
