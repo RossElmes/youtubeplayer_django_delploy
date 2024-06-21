@@ -14,3 +14,4 @@ python manage.py migrate
 #Build Super User on Render
 if [[CREATESUPERUSER]]:
     python manage.py createsuperuser
+
