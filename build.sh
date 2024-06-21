@@ -8,10 +8,9 @@ pip install -r requirements.txt
 # Convert static asset files
 python manage.py collectstatic --no-input
 
-# Apply any outstanding database migrations
-python manage.py migrate
-
 #Build Super User on Render
 if [[CREATESUPERUSER]]:
     python manage.py createsuperuser
 
+# Apply any outstanding database migrations
+python manage.py migrate
