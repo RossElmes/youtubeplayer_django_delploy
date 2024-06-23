@@ -6,6 +6,10 @@ This is a Django-based application for a coffee shop that allows customers to lo
 See the git repo. [Git Repo](https://github.com/RossElmes/youtubeplayer_django_delploy)  
 See link to the [Coffee App](https://youtubeplayer-django-27h4.onrender.com)  
 
+### Superuser Login    
+Password:rossco123  
+Username:ross 
+
 ## Features
 
 ### Customer Features
