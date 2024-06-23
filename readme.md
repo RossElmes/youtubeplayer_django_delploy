@@ -109,6 +109,7 @@ See link to the [Coffee App](https://youtubeplayer-django-27h4.onrender.com)
 ### Prerequisites
 
 I have sumarised the [how to guide](https://docs.render.com/deploy-django) below. 
+I leverage this to create a [super user on deployed app](https://community.render.com/t/is-it-possible-to-create-django-admin-account-with-free-plan/6972)
 
 1. Ensure you have a Render account. Sign up at [Render](https://render.com/).
 2. Ensure your project is hosted on GitHub.
