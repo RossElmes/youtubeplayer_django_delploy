@@ -42,6 +42,8 @@ Username:ross
 
 ## Models
 
+![Data Model](Datamodel.png)
+
 - **Product**
   - Name
   - Description
