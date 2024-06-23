@@ -2,6 +2,9 @@
 
 This is a Django-based application for a coffee shop that allows customers to log in, pre-order drinks, and view order summaries. The admin can manage products and view orders placed by customers.
 
+## Link to repo
+See the git repo. [Git Repo](https://github.com/RossElmes/youtubeplayer_django_delploy)
+
 ## Features
 
 ### Customer Features
