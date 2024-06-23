@@ -98,18 +98,17 @@ See link to the [Coffee App](https://youtubeplayer-django-27h4.onrender.com)
 
 2. **Place an Order**
    - Browse products and add them to the order.
-   - Select a pickup time slot.
    - Complete the order and view the confirmation page.
 
 3. **Admin Actions**
    - Manage products from the admin panel.
    - View and manage orders.
-   - Define and manage available time slots for pre-orders.
-   - Block specific days and times for order acceptance.
 
 ## Deployment to Render
 
 ### Prerequisites
+
+I have sumarised the [how to guide](https://docs.render.com/deploy-django) below. 
 
 1. Ensure you have a Render account. Sign up at [Render](https://render.com/).
 2. Ensure your project is hosted on GitHub.
